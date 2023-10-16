@@ -4,7 +4,7 @@ metadata:
   name: prometheus
   namespace: hspc-monitoring-system
 spec:
-  type: LoadBalancer
+  type: NodePort
   selector:
     app: prometheus
   ports:
@@ -104,7 +104,7 @@ metadata:
   name: grafana
   namespace: hspc-monitoring-system
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: grafana
   ports:
