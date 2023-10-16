@@ -1,0 +1,11 @@
+apiVersion: v2
+name: wordpressdemo
+description: A Helm chart for Kubernetes-Wordpress
+type: application
+version: 1.0.0
+appVersion: 1.0.0
+
+dependencies:
+- name: wordpress
+  version: "18.0.6"
+  repository: "https://charts.bitnami.com/bitnami"

@@ -1,0 +1,59 @@
+# Copyright VMware, Inc.
+# SPDX-License-Identifier: APACHE-2.0
+
+## @section Global parameters
+## Global Docker image parameters
+## Please, note that this will override the image parameters, including dependencies, configured to use the global value
+## Current available global Docker image parameters: imageRegistry, imagePullSecrets and storageClass
+##
+
+## @param global.imageRegistry Global Docker image registry
+## @param global.imagePullSecrets Global Docker registry secret names as an array
+## @param global.storageClass Global StorageClass for Persistent Volume(s)
+##
+wordpress:
+  global:
+    storageClass: "csi-vsphere-sc-vol05"
+
+  ## @param wordpressUsername WordPress username
+  ##
+  wordpressUsername: admin
+  wordpressPassword: "wordpress"
+  wordpressBlogName: User's Blog!
+
+  replicaCount: 1
+
+  ## @section Persistence Parameters
+  ##
+
+  ## Persistence Parameters
+  ## ref: https://kubernetes.io/docs/user-guide/persistent-volumes/
+  ##
+  persistence:
+    storageClass: "csi-vsphere-sc-vol05"
+    size: 1Gi
+
+  ## MariaDB chart configuration
+  ## ref: https://github.com/bitnami/charts/blob/main/bitnami/mariadb/values.yaml
+  ##
+  mariadb:
+    ## @param mariadb.architecture MariaDB architecture. Allowed values: `standalone` or `replication`
+    ##
+    architecture: replication
+    ## MariaDB Primary configuration
+    ##
+    primary:
+      ## MariaDB Primary Persistence parameters
+      ## ref: https://kubernetes.io/docs/user-guide/persistent-volumes/
+      ## @param mariadb.primary.persistence.enabled Enable persistence on MariaDB using PVC(s)
+      ## @param mariadb.primary.persistence.storageClass Persistent Volume storage class
+      ## @param mariadb.primary.persistence.accessModes [array] Persistent Volume access modes
+      ## @param mariadb.primary.persistence.size Persistent Volume size
+      ##
+      persistence:
+        storageClass: "csi-vsphere-sc-vol05"
+        size: 2Gi
+    secondary:
+      persistence:
+        storageClass: "csi-vsphere-sc-vol05"
+        size: 2Gi
