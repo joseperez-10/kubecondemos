@@ -31,7 +31,7 @@ wordpress:
   ##
   persistence:
     storageClass: "csi-vsphere-sc-vol05"
-    size: 1Gi
+    size: 3Gi
 
   ## MariaDB chart configuration
   ## ref: https://github.com/bitnami/charts/blob/main/bitnami/mariadb/values.yaml
