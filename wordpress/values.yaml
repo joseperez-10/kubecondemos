@@ -52,8 +52,8 @@ wordpress:
       ##
       persistence:
         storageClass: "csi-vsphere-sc-vol05"
-        size: 2Gi
+        size: 3Gi
     secondary:
       persistence:
         storageClass: "csi-vsphere-sc-vol05"
-        size: 2Gi
+        size: 3Gi
