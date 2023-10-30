@@ -21,7 +21,7 @@ wordpress:
   wordpressPassword: "wordpress"
   wordpressBlogName: UCP User's Blog!
 
-  replicaCount: 1
+  replicaCount: 2
 
   ## @section Persistence Parameters
   ##
