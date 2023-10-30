@@ -19,7 +19,7 @@ wordpress:
   ##
   wordpressUsername: admin
   wordpressPassword: "wordpress"
-  wordpressBlogName: User's Blog!
+  wordpressBlogName: UCP User's Blog!
 
   replicaCount: 1
 
