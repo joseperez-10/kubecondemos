@@ -30,8 +30,8 @@ wordpress:
   ## ref: https://kubernetes.io/docs/user-guide/persistent-volumes/
   ##
   persistence:
-    storageClass: "csi-vsphere-sc-vol05"
-    size: 1Gi
+    storageClass: "vsp-186-sc"
+    size: 2Gi
 
   ## MariaDB chart configuration
   ## ref: https://github.com/bitnami/charts/blob/main/bitnami/mariadb/values.yaml
@@ -51,9 +51,9 @@ wordpress:
       ## @param mariadb.primary.persistence.size Persistent Volume size
       ##
       persistence:
-        storageClass: "csi-vsphere-sc-vol05"
-        size: 2Gi
+        storageClass: "vsp-e1090-nvme-sc"
+        size: 4Gi
     secondary:
       persistence:
-        storageClass: "csi-vsphere-sc-vol05"
-        size: 2Gi
+        storageClass: "vsp-e1090-nvme-sc"
+        size: 4Gi
