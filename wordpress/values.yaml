@@ -12,16 +12,13 @@
 ## @param global.storageClass Global StorageClass for Persistent Volume(s)
 ##
 wordpress:
-  global:
-    storageClass: "csi-vsphere-sc-vol05"
-
   ## @param wordpressUsername WordPress username
   ##
   wordpressUsername: admin
   wordpressPassword: "wordpress"
   wordpressBlogName: UCP User's Blog!
 
-  replicaCount: 2
+  replicaCount: 1
 
   ## @section Persistence Parameters
   ##
