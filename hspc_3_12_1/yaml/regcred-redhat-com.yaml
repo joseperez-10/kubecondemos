@@ -1,0 +1,5 @@
+kubectl create secret docker-registry regcred-redhat-com \
+--namespace=hspc-operator-system \
+--docker-server=registry.connect.redhat.com \
+--docker-username=jperez.hds \
+--docker-password=Hitachi1!
