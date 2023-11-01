@@ -6,11 +6,6 @@
 ## Please, note that this will override the image parameters, including dependencies, configured to use the global value
 ## Current available global Docker image parameters: imageRegistry, imagePullSecrets and storageClass
 ##
-
-## @param global.imageRegistry Global Docker image registry
-## @param global.imagePullSecrets Global Docker registry secret names as an array
-## @param global.storageClass Global StorageClass for Persistent Volume(s)
-##
 wordpress:
   ## @param wordpressUsername WordPress username
   ##
@@ -41,12 +36,6 @@ wordpress:
     ##
     primary:
       ## MariaDB Primary Persistence parameters
-      ## ref: https://kubernetes.io/docs/user-guide/persistent-volumes/
-      ## @param mariadb.primary.persistence.enabled Enable persistence on MariaDB using PVC(s)
-      ## @param mariadb.primary.persistence.storageClass Persistent Volume storage class
-      ## @param mariadb.primary.persistence.accessModes [array] Persistent Volume access modes
-      ## @param mariadb.primary.persistence.size Persistent Volume size
-      ##
       persistence:
         storageClass: "vsp-e1090-nvme-sc"
         size: 4Gi
