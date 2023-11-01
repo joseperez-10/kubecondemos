@@ -65,7 +65,7 @@ spec:
     - metadata:
         name: data
       spec:
-        storageClassName: vsp-186-sc
+        storageClassName: vsp-e1090-nvme-sc
         accessModes: ["ReadWriteOnce"]
         resources:
           requests:
@@ -173,7 +173,7 @@ spec:
     - metadata:
         name: data
       spec:
-        storageClassName: vsp-186-sc
+        storageClassName: vsp-e1090-nvme-sc
         accessModes: ["ReadWriteOnce"]
         resources:
           requests:
